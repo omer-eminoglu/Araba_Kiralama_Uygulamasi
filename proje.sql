@@ -196,12 +196,6 @@ CREATE TABLE IF NOT EXISTS `fatura` (
   KEY `musteri_id` (`musteri_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Tablo döküm verisi `fatura`
---
-
-INSERT INTO `fatura` (`fatura_id`, `musteri_id`, `sirket_adi`, `vergi_dairesi`, `vergi_no`, `adres`, `olusturma_tarihi`) VALUES
-(3, 41, 'Rent A Car', 'Ümraniye', '456346436', 'Yamanevler Mah. Dr. Fazıl Küçük Cd. No:9 Ümraniye/İSTANBUL', '2024-11-10 19:47:09');
 
 -- --------------------------------------------------------
 
@@ -228,12 +222,7 @@ CREATE TABLE IF NOT EXISTS `musteriler` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Tablo döküm verisi `musteriler`
---
 
-INSERT INTO `musteriler` (`id`, `ad_soyad`, `dogum_tarihi`, `email`, `tc_no`, `passport_no`, `ehliyet_seri_no`, `ehliyet_alis_tarihi`, `telefon`, `adres`, `il`, `ilce`, `ulke`, `sifre`) VALUES
-(41, 'ömer faruk eminoğlu', '1900-06-01', 'mrfrkmnll@gmail.com', '39025613032', NULL, '290557', '2000-07-01', '05534682052', 'cemil meriç mah. fırat sk. no:79/3', 'İstanbul', 'Ümraniye', '', '$2y$10$DUfFclfAEHfjfXVa0ISNGeGBI9F0Vr2KwhpaonWKSLzypcLNpvx9G');
 
 -- --------------------------------------------------------
 
@@ -254,15 +243,6 @@ CREATE TABLE IF NOT EXISTS `odeme` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=87 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Tablo döküm verisi `odeme`
---
-
-INSERT INTO `odeme` (`id`, `toplam_fiyat`, `kart_isim`, `kart_no`, `ay`, `yil`, `cvc`, `odeme_tarihi`) VALUES
-(83, 4600, 'dgkjkjghkjghjh', '7887877878787878', 4, 2026, 788, '2024-11-10 17:36:45'),
-(84, 4600, 'wtrewtrew', '7777777774566546', 2, 2026, 777, '2024-11-10 18:07:19'),
-(85, 5400, 'fcncgnbvmvb', '8568576875756785', 10, 2029, 575, '2024-11-10 19:48:11'),
-(86, 10600, 'bsbfdfgfdfgdgn', '5655564654654654', 3, 2026, 456, '2024-11-10 20:15:39');
 
 -- --------------------------------------------------------
 
@@ -318,15 +298,7 @@ CREATE TABLE IF NOT EXISTS `rezervasyon` (
   KEY `rezervasyon_ibfk_6` (`odeme_id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
---
--- Tablo döküm verisi `rezervasyon`
---
 
-INSERT INTO `rezervasyon` (`id`, `arac_detay_id`, `arac_id`, `musteri_id`, `teslim_alinacak_tarih`, `teslim_alinacak_saat`, `teslim_edilecek_tarih`, `teslim_edilecek_saat`, `teslim_alinacak_sube_id`, `teslim_edilecek_sube_id`, `odeme_id`, `ucus_kodu`) VALUES
-(22, 500, 46, 41, '2024-11-10', '20:33:00', '2024-11-12', '20:33:00', 5, 5, 83, ''),
-(23, 501, 46, 41, '2024-11-10', '20:33:00', '2024-11-12', '20:33:00', 5, 5, 84, ''),
-(24, 502, 46, 41, '2024-11-10', '22:44:00', '2024-11-12', '22:44:00', 5, 5, 85, ''),
-(25, 546, 50, 41, '2024-11-10', '23:08:00', '2024-11-12', '23:08:00', 5, 5, 86, '');
 
 -- --------------------------------------------------------
 
